@@ -1,0 +1,64 @@
+1 d = int(input('Введите рофл: '))
+if d % 2 == 0:
+    print('Красава число четное')
+else:
+    print('Неповезло неповезло')
+
+2 d = int(input('Введите рофл: '))
+x = (d-32)*(5/9)
+print('Вот ваш рофл: ', x)
+
+
+3 d = int(input('Введите рофл: '))
+if d % 5 != 0 and d % 7 != 0:
+        print('00')
+else:
+    if d % 5 == 0 and d % 7 == 0:
+                    print('11')
+    else:
+        if d % 5 == 0:
+            print('01')
+        else:
+            if d % 7 == 0:
+                print('10')
+
+4 import math
+
+print("Введите рофлы для уравнения")
+print("ax^2 + bx + c = 0:")
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
+d = b ** 2 - 4 * a * c
+print("о великий суп наварили D = %.0f" % d)
+ 
+if d > 0:
+    x1 = (-b + math.sqrt(d)) / (2 * a)
+    x2 = (-b - math.sqrt(d)) / (2 * a)
+    print("x1 = %.0f \nx2 = %.0f" % (x1, x2))
+elif d == 0:
+    x = -b / (2 * a)
+    print("x = %.0f" % x)
+else:
+    print("Рофлов нет")
+
+5 import random
+
+print('Введите максимально возможное число')
+max_n = int(input())
+n = random.randint(1, max_n)
+
+print('Введите количество попыток')
+k = int(input())
+
+for i in range(k):
+    print('Введите число')
+    user_n = int(input())
+    if user_n > n:
+        print('Искомое число меньше')
+    elif user_n < n:
+        print('Искомое число больше')
+    elif user_n == n:
+        print('Вы угадали искомое число!')
+        break
+print('Конец игры')
