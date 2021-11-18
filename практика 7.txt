@@ -61,3 +61,31 @@ def fib(n):
         return fib(n - 1) + fib(n - 2)
 print(fib(3))
 
+ 6
+
+line1 = input('Enter the first word: ')
+line2 = input('Enter the second word: ')
+
+new_line1 = line1.replace(" ","")
+new_line2 = line2.replace(" ","")
+
+def is_anagram(new_line1, new_line2):
+    if sorted(new_line1.lower()) == sorted(new_line2.lower()):
+        return True
+    else:
+        return False
+        
+print(is_anagram(line1, line2))
+
+ 7
+
+line = input('Enter the word: ')
+new_line = line.replace(" ","")
+new_new_line = sorted(new_line.lower())
+r = "".join(set(new_new_line))
+def has_duplicates(new_new_line, r):
+    if len(new_new_line) == len(r):
+        return False
+    else:
+        return True
+print(has_duplicates(new_new_line, r))

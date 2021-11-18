@@ -1,5 +1,5 @@
 
-Задание 1
+ 1
 
 def f(a,n):
     a = a.split(' ')
@@ -16,7 +16,7 @@ print('‚ведите число')
 n = int(input())
 print(f(a,n)) 
 
-Задание 2
+ 2
 
 a = []
 print('Введите три числа через пробел три раза')
@@ -33,7 +33,7 @@ else:
     print('квадрат неправильный')
 
 
-Задание 3
+ 3
 
 a = input()
 a = a.split(' ')
@@ -47,7 +47,7 @@ for i in range(len(a)):
 b = ''.join(b)
 print(b)
 
-Задание 4
+ 4
 
 import random
 
@@ -68,7 +68,7 @@ for i in range(a):
 print ('You scored', tot_points)
 
 
-Задание 5
+ 5
 
 def glas(a):
     spis = 'а, о, и, е, ё, э, ы, у, ю, я'
@@ -95,3 +95,13 @@ if fun == 0:
     print(glas(a))
 elif fun == 1:
     print(sogl(a))
+
+
+
+ 6
+
+foo = input("ВВЕДИТЕ СТРОКУ")
+
+max_item = lambda s: max(t := {i: s.count(i) for i in s}, key=t.get)
+
+print(max_item(foo))
